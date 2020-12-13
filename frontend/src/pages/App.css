@@ -3,7 +3,6 @@ main {
   height: 750px;
   display: flex;
   flex-direction: column;
-  background: url('../dist/layout_add.png');
 }
 
 header {
@@ -105,7 +104,6 @@ section {
 }
 
 .my-teams__button-add:hover {
-  background: linear-gradient(to bottom, #7f387e, #ab3977);
   box-shadow: 0 0 4px 4px rgba(171, 57, 119, 0.4);
   transition: background 0.25s, box-shadow 0.25s;
 }

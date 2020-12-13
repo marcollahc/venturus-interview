@@ -1,5 +1,14 @@
+main {
+    height: 1800px;
+}
+
+section {
+    height: 1472px;
+}
+
 .create-your-team {
     width: 100%;
+    background: #fff;
 }
 
 .team-information {
@@ -31,9 +40,20 @@
     grid-gap: 118px;
 }
 
+.team-map {
+    height: 628px;
+    margin: 0 0 16px 0;
+    background: linear-gradient(to bottom, #a0387b, #73337c);
+    border-radius: 4px;
+}
+
 .form-field {
     display: flex;
     flex-direction: column;
+}
+
+.form-field:not(:first-child) {
+    margin: 24px 0 0 0;
 }
 
 .form-field__label {
@@ -41,4 +61,73 @@
     font-size: 13px;
     font-weight: 700;
     color: #c80045;
+}
+
+.form-field__input,
+.form-field__textarea {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #920034;
+}
+
+.form-field__input {
+    height: 24px;
+}
+
+.form-field__select {
+    height: 34px;
+}
+
+.form-field__radio {
+    font-size: 13px;
+    display: flex;
+}
+
+.custom-team {
+    width: 974px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 118px;
+}
+
+.players-list {
+    margin: 20px 0 0 0;
+}
+
+.players-list__item {
+    padding: 16px 32px 16px 32px;
+    border: 1px dashed #dfdfdf;
+    background: linear-gradient(to bottom, #fefefe, #e4e4e4);
+    font-size: 13px;
+}
+
+.players-list__name-age,
+.players-list__nationality {
+    color: #ce1c5d;
+}
+
+.players-list__name-age strong,
+.players-list__nationality strong {
+    color: #000;
+}
+
+.players-list__name-age {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-information__button--save {
+    width: 100%;
+    height: 46px;
+    background: linear-gradient(to bottom, #9b3779, #77327b);
+    border: 1px solid #c80045;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.team-information__button--save:hover {
+    box-shadow: 0 0 4px 4px rgba(171, 57, 119, 0.4);
+    transition: background 0.25s, box-shadow 0.25s;
 }
