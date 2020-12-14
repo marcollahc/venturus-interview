@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Header, Footer, MyTeamsItem, Top5Item } from '../components';
-
-import './App.css';
+import { Header, Footer, MyTeamsItem, Top5Box, PickedPlayerItem } from '../components';
 
 function App() {
   return (
@@ -28,44 +26,16 @@ function App() {
               <h2 className="content__title">Top 5</h2>
             </div>
             <div className="top-5__list">
-              <div className="top-5__box">
-                <div className="top-5__box--title">
-                  <h3 className="top-5__title">Highest average age</h3>
-                </div>
-                <div className="top-5__average--list">
-                  <Top5Item name="Ajax Ansterdam" average="21.6" />
-                </div>
-              </div>
-              <div className="top-5__box">
-                <div className="top-5__box--title">
-                  <h3 className="top-5__title">Lowest average age</h3>
-                </div>
-                <div className="top-5__average--list">
-                  <Top5Item name="Ajax Ansterdam" average="21.6" />
-                </div>
-              </div>
+              <Top5Box title="Highest average age" />
+              <Top5Box title="Lowest average age" />
             </div>
           </div>
           <div className="content__box picked-player">
-            <div className="picked-player__item">
-              <p className="picked-player__title">Most picked player</p>
-              <div className="picked-player__info">
-                <div className="circle-image__dashed">
-                  <div className="circle-image__round"></div>
-                </div>
-                <div className="picked-player__percent">75%</div>
-              </div>
-            </div>
+            <PickedPlayerItem title="Most picked player" percent="75%" dashed={true} />
             <div className="half-field__line">
               <div className="half-field__circle"></div>
             </div>
-            <div className="picked-player__item">
-              <p className="picked-player__title">Less picked player</p>
-              <div className="picked-player__info">
-                <div className="circle-image__round"></div>
-                <div className="picked-player__percent">25%</div>
-              </div>
-            </div>
+            <PickedPlayerItem title="Less picked player" percent="25%" dashed={false} />
           </div>
         </div>
       </section>
