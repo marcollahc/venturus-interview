@@ -1,8 +1,5 @@
 import { Header, Footer } from '../components';
 
-import './App.css';
-import './CreateYourTeam.css';
-
 function CreateYourTeam() {
     return (
         <main>
